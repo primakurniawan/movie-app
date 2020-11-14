@@ -1,0 +1,61 @@
+.movieDetail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+}
+
+.movieDetail__img {
+  width: 25%;
+}
+
+.movieDetail__img img {
+  width: 100%;
+}
+
+.movieDetail__info {
+  width: 75%;
+}
+
+.movieDetail_info__list {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.movieDetail_info__list__item--title {
+  font-size: 2rem;
+}
+
+.movieDetail_info__list__item--year {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.movieDetail_info__list__item--rated {
+  font-size: 1.5rem;
+  color: red;
+  font-style: italic;
+}
+
+.movieDetail_info__list__item--rating {
+  font-size: 1.5rem;
+  color: gold;
+  font-weight: bold;
+}
+
+.movieDetail_info__list__item--runtime {
+  font-size: 1.5rem;
+}
+.movieDetail_info__list__item--genre {
+  font-size: 1.25rem;
+  color: greenyellow;
+  font-weight: bold;
+  font-style: italic;
+}
+.movieDetail_info__list__item--actors {
+  font-size: 1.25rem;
+  color: blueviolet;
+}
+.movieDetail_info__list__item--plot {
+  font-size: 1.15rem;
+}
