@@ -5,7 +5,14 @@ const MovieDetail = ({ movie }) => {
   return (
     <div className="movieDetail">
       <div className="movieDetail__img">
-        <img src={movie.Poster} alt={movie.poster} />
+        <img
+          src={
+            movie.Poster !== "N/A"
+              ? movie.Poster
+              : "https://p7.hiclipart.com/preview/59/893/319/film-clapperboard-cinematic-techniques-clapperboard-film-film-elements.jpg"
+          }
+          alt={movie.poster}
+        />
       </div>
       <div className="movieDetail__info">
         <ul className="movieDetail_info__list">

@@ -1,3 +1,5 @@
-movieList__list {
+.movieList__list {
   list-style: none;
+  padding-top: 6rem;
+  z-index: -1;
 }

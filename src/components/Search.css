@@ -1,4 +1,10 @@
 .search {
+  position: fixed;
+  background: #fff;
+  width: 20%;
+}
+
+.search__form {
   display: flex;
   padding: 1rem 0;
 }
@@ -18,4 +24,15 @@
   border: 1px solid black;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.searchResults {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.searchTitle {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: blueviolet;
 }

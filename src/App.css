@@ -4,10 +4,15 @@
   align-items: center;
   width: 85%;
   margin: auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .app__left {
   width: 25%;
+  overflow: scroll;
+  height: 100vh;
+  position: relative;
 }
 
 .app__right {
