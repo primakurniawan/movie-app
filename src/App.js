@@ -14,33 +14,36 @@ const App = () => {
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(100);
 
-  const fetchMovies = (title, page = 1) => {
-    fetch(`http://www.omdbapi.com/?apikey=c965042e&s=${title}&page=${page}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.Response !== "False") {
-          setMovies(data.Search);
-          SetSearchResults(data.totalResults);
-          setTotalPage(Math.ceil(parseInt(data.totalResults) / 10));
-        } else {
-          setMovies([]);
-          SetSearchResults(0);
-        }
-      })
-      .catch((err) => console.error(err));
+  const fetchMovies = async (title, page = 1) => {
+    try {
+      const res = await fetch(
+        `http://www.omdbapi.com/?apikey=c965042e&s=${title}&page=${page}`
+      );
+      const data = await res.json();
+      if (data.Response !== "False") {
+        setMovies(data.Search);
+        SetSearchResults(data.totalResults);
+        setTotalPage(Math.ceil(parseInt(data.totalResults) / 10));
+      } else {
+        setMovies([]);
+        SetSearchResults(0);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const fetchMovie = (id) => {
-    fetch(`http://www.omdbapi.com/?apikey=c965042e&i=${id}&plot=full`)
-      .then((res) => res.json())
-      .then((data) => setMovie(data))
-      .catch((err) => console.log(err));
+  const fetchMovie = async (id) => {
+    try {
+      const res = await fetch(
+        `http://www.omdbapi.com/?apikey=c965042e&i=${id}&plot=full`
+      );
+      const data = await res.json();
+      setMovie(data);
+    } catch (err) {
+      console.error(err);
+    }
   };
-
-  // useEffect(() => {
-  //   fetchMovies();
-  //   fetchMovie();
-  // }, []);
 
   const searchMovie = (title) => {
     setSearchTitle(title);
