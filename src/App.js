@@ -17,7 +17,7 @@ const App = () => {
   const fetchMovies = async (title, page = 1) => {
     try {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=c965042e&s=${title}&page=${page}`
+        `https://www.omdbapi.com/?apikey=c965042e&s=${title}&page=${page}`
       );
       const data = await res.json();
       if (data.Response !== "False") {
@@ -36,7 +36,7 @@ const App = () => {
   const fetchMovie = async (id) => {
     try {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=c965042e&i=${id}&plot=full`
+        `https://www.omdbapi.com/?apikey=c965042e&i=${id}&plot=full`
       );
       const data = await res.json();
       setMovie(data);
