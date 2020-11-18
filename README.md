@@ -1,8 +1,8 @@
-# Movies React App by Prime
+# Movie React App by Prime
 
-You can see the Demo [here](https://github.com/facebook/create-react-app).
+You can see the Demo [here](https://movies-app-23675.web.app).
 
-![]()
+![food-react-app](movies-app.png)
 
 Feel free to use and and fork or pull request, you can run:
 
